@@ -12,8 +12,8 @@ public class ArrayandMethods {
 		int minus = ages[ages.length-1] - ages[0];
 		System.out.println(minus);
 		//c.Use a loop to iterate through the array and calculate the average age
-		int totalAge = 0;
-		for (int i : ages) {
+		int totalAge = 0; //declares a variable totalAge and initializes it to 0.
+		for (int i : ages) { //iterate through each element i in the ages array and adds the current element i to the totalAge.
 			totalAge += i;
 		}
 		double averageAge = (double) totalAge / ages.length;
@@ -23,14 +23,14 @@ public class ArrayandMethods {
         String[] names = {"Sam", "Tommy", "Tim", "Sally", "Buck", "Bob"};
         //a.calculate the average number of letters per name
         int totalLetters = 0;
-        for (String name : names) {
+        for (String name : names) {  //For iterate through each name, calculate the length of the name and adds it to the totalLetters variable.
         	totalLetters += name.length();
         }
         double averageLetter = (double) totalLetters / names.length;
         System.out.println("The Average Letters per name is : " + averageLetter);
         //b.concatenate all the names together
-        String addNames = "";
-        for (String name : names) {
+        String addNames = "";  //Initialize an empty string to hold the concatenated names
+        for (String name : names) {  //Concatenate each name and a 'space' to the addNames string
         	addNames += name + " ";
         }
         System.out.println("Names are:" + addNames);
@@ -40,13 +40,13 @@ public class ArrayandMethods {
         
         //Q5.new array of int called nameLengths & add the length of each name to the nameLengths array
         int[] nameLengths = new int [names.length];
-        for (int i = 0; i < names.length; i++) {
+        for (int i = 0; i < names.length; i++) {  //assigns the length of each name to the corresponding element of the nameLengths array.
             nameLengths[i] = names[i].length();
         }
         //Q6.calculate the sum of all the elements in the nameLengths array
         int totalelements = 0;
         for (int i = 0; i < nameLengths.length; i++) {
-        	totalelements += nameLengths[i];
+        	totalelements += nameLengths[i];   // adds the current element to the "totalelements" variable.
         }
         System.out.println("The sum is " + totalelements);
         
@@ -56,7 +56,7 @@ public class ArrayandMethods {
 	 public static String concatenateWord(String word, int n) {
 		 String result = "";
      	for (int i=0; i<n; i++) {
-     		result += word;
+     		result += word;    //Each iteration of the loop will concatenate a copy of word onto the result String.
      	}
      	return result;
      }
@@ -70,7 +70,7 @@ public class ArrayandMethods {
 	 public static boolean intsArray(int[] nums) {
 		 int sum = 0;
 		 for (int num : nums) {
-			 sum += num;
+			 sum += num;   //adds each element to a variable called sum.
 		 }
 		 return sum >100;
 	 }
@@ -79,9 +79,9 @@ public class ArrayandMethods {
 	 public static double avgElements(double[] nums) {
 		 double sum = 0;
 		    for (double num : nums) {
-		        sum += num;
+		        sum += num;     ////adds each element to a variable called sum.
 		    }
-		    return sum / nums.length;
+		    return sum / nums.length;    // average of all elements in the array
 	 }
 	 
 	 //Q11 two arrays of double and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
@@ -89,10 +89,10 @@ public class ArrayandMethods {
 		double totalfirst = 0;
 		double totalsecond = 0;
 		for (double i : first) {
-			totalfirst += i;
+			totalfirst += i;      //loops and add each element to the totalfirst variable
 		}
 		for (double i : second) {
-			totalsecond += i;
+			totalsecond += i;     //loops and add each element to the totalsecond variable
 		}
 		double averageFirst = (double) totalfirst/first.length;
 		double averageSecond = (double)totalsecond/second.length;
