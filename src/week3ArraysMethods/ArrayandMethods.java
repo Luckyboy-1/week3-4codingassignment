@@ -86,8 +86,8 @@ public class ArrayandMethods {
 	 
 	 //Q11 two arrays of double and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
 	 public static boolean doubleArray(double[] first, double[] second) {
-		int totalfirst = 0;
-		int totalsecond = 0;
+		double totalfirst = 0;
+		double totalsecond = 0;
 		for (double i : first) {
 			totalfirst += i;
 		}
